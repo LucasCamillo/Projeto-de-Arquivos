@@ -130,14 +130,14 @@ public class CalcCC extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEntradaActionPerformed
 
     private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
-        CacheCalcSuperF calc = new CacheCalcSuperF();
+        ISuperFatorial calc = SuperFactorialFactory.createCachedCalcSuperF();
         Integer entr = Integer.valueOf(txtEntrada.getText());
         BigInteger sF = BigInteger.valueOf(entr);
         
         try {
             txtSaida.setText(calc.getSuperFatorial(sF).toString());
         } catch (InputException ex) {
-            Logger.getLogger(CalcCC.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CalcCC.class.getName()).log(Level.SEVERE, null, "ERRO NA HORA DE PRINTAR NA SAIDA!");
         }
     }//GEN-LAST:event_calcularActionPerformed
 

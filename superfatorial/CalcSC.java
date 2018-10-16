@@ -129,7 +129,7 @@ public class CalcSC extends javax.swing.JFrame {
 
     private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
 
-        CalcSuperFat calc = new CalcSuperFat();
+        ISuperFatorial calc = SuperFactorialFactory.createBasicSuperFact();
         Integer entr = Integer.valueOf(txtEntrada.getText());
         
         BigInteger sF = BigInteger.valueOf(entr);
